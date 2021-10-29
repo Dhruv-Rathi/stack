@@ -1,0 +1,28 @@
+{
+  "root": "apps/dash-e2e",
+  "sourceRoot": "apps/dash-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/dash-e2e/cypress.json",
+        "devServerTarget": "dash:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "dash:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dash-e2e/**/*.js"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dash"]
+}

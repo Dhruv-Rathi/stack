@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "dash": "apps/dash",
+    "dash-e2e": "apps/dash-e2e",
+    "land": "apps/land",
+    "land-e2e": "apps/land-e2e"
+  }
 }

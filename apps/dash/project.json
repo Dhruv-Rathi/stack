@@ -1,0 +1,80 @@
+{
+  "root": "apps/dash",
+  "sourceRoot": "apps/dash/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "NODE_ENV=production npx tailwindcss-cli@latest build -i ./apps/dash/src/styles.css -c ./apps/dash/tailwind.config.js -o ./apps/dash/src/tailwind.css --minify && npx nx build-app dash --prod"
+      }
+    },
+    "build-app": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/dash",
+        "index": "apps/dash/src/index.html",
+        "baseHref": "/",
+        "main": "apps/dash/src/main.js",
+        "polyfills": "apps/dash/src/polyfills.js",
+        "tsConfig": "apps/dash/tsconfig.app.json",
+        "assets": ["apps/dash/src/favicon.ico", "apps/dash/src/assets"],
+        "styles": ["apps/dash/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/dash/src/environments/environment.js",
+              "with": "apps/dash/src/environments/environment.prod.js"
+            },
+            {
+              "replace": "apps/dash/src/styles.css",
+              "with": "apps/dash/src/tailwind.css"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "dash:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "dash:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dash/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/dash"],
+      "options": {
+        "jestConfig": "apps/dash/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
