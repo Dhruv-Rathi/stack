@@ -4,6 +4,8 @@
     "dash": "apps/dash",
     "dash-e2e": "apps/dash-e2e",
     "land": "apps/land",
-    "land-e2e": "apps/land-e2e"
+    "land-e2e": "apps/land-e2e",
+    "mobile": "apps/mobile",
+    "mobile-e2e": "apps/mobile-e2e"
   }
 }

@@ -3,14 +3,14 @@
   "sourceRoot": "apps/dash/src",
   "projectType": "application",
   "targets": {
-    "build": {
+    "build-with-tw": {
       "executor": "@nrwl/workspace:run-commands",
       "outputs": [],
       "options": {
-        "command": "NODE_ENV=production npx tailwindcss-cli@latest build -i ./apps/dash/src/styles.css -c ./apps/dash/tailwind.config.js -o ./apps/dash/src/tailwind.css --minify && npx nx build-app dash --prod"
+        "command": "NODE_ENV=production npx tailwindcss-cli@latest build -i ./apps/dash/src/styles.css -c ./apps/dash/tailwind.config.js -o ./apps/dash/src/tailwind.css --minify && npx nx build dash --prod"
       }
     },
-    "build-app": {
+    "build": {
       "executor": "@nrwl/web:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
