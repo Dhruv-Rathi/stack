@@ -7,8 +7,8 @@ platform :ios, '11.0'
 target 'Mobile' do
   config = use_native_modules!
 
-  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
-  pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
+  # pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
+  # pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
 
   use_react_native!(
     :path => config[:reactNativePath],

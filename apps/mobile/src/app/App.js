@@ -20,16 +20,20 @@ import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrow
 import Star from './star.svg';
 import { Box } from '@reusejs/react-native-component-template';
 import notifee from '@notifee/react-native';
-// import messaging from '@react-native-firebase/messaging';
+import messaging from '@react-native-firebase/messaging';
 
 const App = () => {
   async function onAppBootstrap() {
-    // // Register the device with FCM
-    // await messaging().registerDeviceForRemoteMessages();
-    // // Get the token
-    // const token = await messaging().getToken();
-    // // Save the token
-    // console.log('token:', token);
+    try {
+      // Register the device with FCM
+      await messaging().registerDeviceForRemoteMessages();
+      // Get the token
+      const token = await messaging().getToken();
+      // Save the token
+      console.log('token:', token);
+    } catch (error) {
+      console.log('onAppBootstrap', error);
+    }
   }
 
   async function onDisplayNotification() {
