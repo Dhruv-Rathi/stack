@@ -31,3 +31,31 @@ Add `android:exported="true"`
       android:exported="true"
     >
 ```
+
+
+### Step 4
+
+iOS needs permissions
+
+```
+async function checkApplicationPermission() {
+  const settings = await notifee.requestPermission();
+
+  // settings only available on iOS
+  if (settings) {
+    if (settings.authorizationStatus) {
+      console.log('User has notification permissions enabled');
+    } else {
+      console.log('User has notification permissions disabled');
+    }
+  }
+}
+```
+
+
+### Step 5
+
+- Create firebase project
+- `yarn add @react-native-firebase/app`
+- Follow https://rnfirebase.io/#3-ios-setup
+- Open Podfile and add `pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'`

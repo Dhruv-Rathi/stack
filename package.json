@@ -7,21 +7,28 @@
     "build": "nx build",
     "test": "nx test",
     "mobile:android": "nx run-android mobile",
-    "mobile:ios": "nx run-ios mobile"
+    "mobile:ios": "nx run-ios mobile",
+    "mobile:android:clean": "cd apps/mobile/android && ./gradlew clean && cd ../../..",
+    "mobile:ios:clean": "cd apps/mobile/ios && xcodebuild clean && cd ../../..",
+    "mobile:ios:pod": "cd apps/mobile/ios && pod install --repo-update && cd ../../.."
   },
   "private": true,
   "dependencies": {
     "@notifee/react-native": "^4.0.0",
     "@nrwl/next": "^13.1.2",
+    "@react-native-firebase/app": "^13.0.1",
+    "@react-native-firebase/messaging": "^13.0.1",
     "@reusejs/react-buttons": "^0.0.12",
     "@reusejs/react-native-component-template": "^0.0.3",
+    "add": "^2.0.6",
     "core-js": "^3.6.5",
     "next": "12.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.66.1",
     "regenerator-runtime": "0.13.7",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@nrwl/cli": "13.1.2",

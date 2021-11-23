@@ -23,21 +23,29 @@ import notifee from '@notifee/react-native';
 
 const App = () => {
   async function onDisplayNotification() {
-    // Create a channel
-    const channelId = await notifee.createChannel({
-      id: 'default',
-      name: 'Default Channel',
-    });
+    try {
+      // Create a channel
+      const channelId = await notifee.createChannel({
+        id: 'default',
+        name: 'Default Channel',
+      });
 
-    // Display a notification
-    await notifee.displayNotification({
-      title: 'Notification Title',
-      body: 'Main body content of the notification',
-      android: {
-        channelId,
-        smallIcon: 'ic_launcher', // optional, defaults to 'ic_launcher'.
-      },
-    });
+      console.log('createChannel', channelId);
+
+      // Display a notification
+      const displayNotificationResponse = await notifee.displayNotification({
+        title: 'Notification Title',
+        body: 'Main body content of the notification',
+        android: {
+          channelId,
+          smallIcon: 'ic_launcher', // optional, defaults to 'ic_launcher'.
+        },
+      });
+
+      console.log('displayNotificationResponse', displayNotificationResponse);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
