@@ -14,6 +14,7 @@ maven {
 }
 ```
 
+
 ### Step 3
 
 Open `apps/mobile/android/app/src/main/AndroidManifest.xml`
@@ -66,3 +67,10 @@ async function checkApplicationPermission() {
 
 - https://rnfirebase.io/messaging/usage/installation/android
 - https://rnfirebase.io/messaging/usage/installation/ios
+
+
+
+
+---
+
+https://github.com/invertase/react-native-notifee/issues/256#issuecomment-787754998

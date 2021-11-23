@@ -5,13 +5,6 @@ import notifee from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 
 async function onMessageReceived(message) {
-  // console.log(
-  //   'onMessageReceived ----',
-  //   typeof message.notification,
-  //   message.notification
-  // );
-  // notifee.displayNotification(JSON.parse(message.notification));
-
   try {
     const channelId = await notifee.createChannel({
       id: 'default',
