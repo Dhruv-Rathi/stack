@@ -6,6 +6,7 @@ import {
   Image,
   View,
   Text,
+  Button,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
@@ -18,8 +19,27 @@ import {
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 import Star from './star.svg';
 import { Box } from '@reusejs/react-native-component-template';
+import notifee from '@notifee/react-native';
 
 const App = () => {
+  async function onDisplayNotification() {
+    // Create a channel
+    const channelId = await notifee.createChannel({
+      id: 'default',
+      name: 'Default Channel',
+    });
+
+    // Display a notification
+    await notifee.displayNotification({
+      title: 'Notification Title',
+      body: 'Main body content of the notification',
+      android: {
+        channelId,
+        smallIcon: 'ic_launcher', // optional, defaults to 'ic_launcher'.
+      },
+    });
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -28,15 +48,15 @@ const App = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
         >
-          <View style={styles.header}>
-            <Image style={styles.logo} source={require('./logo.png')} />
-            <Text style={styles.heading} testID="heading">
-              Welcome to Mobile
-            </Text>
+          <View style={styles.body}>
+            <Box />
           </View>
 
           <View style={styles.body}>
-            <Box />
+            <Button
+              title="Display Notification"
+              onPress={() => onDisplayNotification()}
+            />
           </View>
         </ScrollView>
       </SafeAreaView>

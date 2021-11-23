@@ -8,6 +8,7 @@
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
-    "@reusejs/react-native-component-template": "*"
+    "@reusejs/react-native-component-template": "*",
+    "@notifee/react-native": "*"
   }
 }
