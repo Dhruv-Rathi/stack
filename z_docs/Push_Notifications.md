@@ -53,9 +53,16 @@ async function checkApplicationPermission() {
 ```
 
 
-### Step 5
+### Step 5: Install @react-native-firebase/app
 
 - Create firebase project
 - `yarn add @react-native-firebase/app`
 - Follow https://rnfirebase.io/#3-ios-setup
-- Open Podfile and add `pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'`
+- Manual linking: https://rnfirebase.io/install-ios
+- Manual linking: https://rnfirebase.io/install-android
+- https://jmp.sh/lhQKlyo
+
+### Step 6: Install @react-native-firebase/messaging
+
+- https://rnfirebase.io/messaging/usage/installation/android
+- https://rnfirebase.io/messaging/usage/installation/ios

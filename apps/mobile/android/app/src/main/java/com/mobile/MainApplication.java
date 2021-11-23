@@ -10,8 +10,12 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import androidx.multidex.MultiDexApplication;
+// import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
+// import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 
-public class MainApplication extends Application implements ReactApplication {
+
+public class MainApplication extends MultiDexApplication implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
@@ -25,7 +29,9 @@ public class MainApplication extends Application implements ReactApplication {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
+          // packages.add(new MainReactPackage());
+          // packages.add(new ReactNativeFirebaseAppPackage());
+          // packages.add(new ReactNativeFirebaseMessagingPackage());
           return packages;
         }
 
