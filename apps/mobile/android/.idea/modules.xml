@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mobile.iml" filepath="$PROJECT_DIR$/.idea/modules/Mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mobile.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mobile.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-951571728/Mobile.notifee_react-native.iml" filepath="$PROJECT_DIR$/.idea/modules/-951571728/Mobile.notifee_react-native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/622512405/Mobile.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/622512405/Mobile.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2127023112/Mobile.react-native-firebase_messaging.iml" filepath="$PROJECT_DIR$/.idea/modules/-2127023112/Mobile.react-native-firebase_messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1276244304/Mobile.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/1276244304/Mobile.react-native-svg.iml" />
+    </modules>
+  </component>
+</project>

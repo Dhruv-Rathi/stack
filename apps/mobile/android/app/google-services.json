@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "843159451510",
+    "project_id": "reusejsstack",
+    "storage_bucket": "reusejsstack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843159451510:android:6d53472a9e673f11272c57",
+        "android_client_info": {
+          "package_name": "com.reusejs.stack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843159451510-4s3mdfa0sfcgtsq5qbvnoqeb50660d89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reusejs.stack",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "843159451510-rdf0ro3u5mgalb3g5ck7tj46vinptv7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXWkF4YdPtNF3CGdgPh-jilRlYaWdq80U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843159451510-rdf0ro3u5mgalb3g5ck7tj46vinptv7b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "843159451510-s0g3j676c49nr3rd92pd7mvsctnusigf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.reusejs.stack"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

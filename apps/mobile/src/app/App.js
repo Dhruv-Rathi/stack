@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,6 +6,7 @@ import {
   Image,
   View,
   Text,
+  Button,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
@@ -18,8 +19,53 @@ import {
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 import Star from './star.svg';
 import { Box } from '@reusejs/react-native-component-template';
+import notifee from '@notifee/react-native';
+import messaging from '@react-native-firebase/messaging';
 
 const App = () => {
+  async function onAppBootstrap() {
+    try {
+      // Register the device with FCM
+      await messaging().registerDeviceForRemoteMessages();
+      // Get the token
+      const token = await messaging().getToken();
+      // Save the token
+      console.log('token:', token);
+    } catch (error) {
+      console.log('onAppBootstrap', error);
+    }
+  }
+
+  async function onDisplayNotification() {
+    try {
+      // Create a channel
+      const channelId = await notifee.createChannel({
+        id: 'default',
+        name: 'Default Channel',
+      });
+
+      console.log('createChannel', channelId);
+
+      // Display a notification
+      const displayNotificationResponse = await notifee.displayNotification({
+        title: 'Notification Title',
+        body: 'Main body content of the notification',
+        android: {
+          channelId,
+          smallIcon: 'ic_launcher', // optional, defaults to 'ic_launcher'.
+        },
+      });
+
+      console.log('displayNotificationResponse', displayNotificationResponse);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  useEffect(() => {
+    onAppBootstrap();
+  }, []);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -28,15 +74,15 @@ const App = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
         >
-          <View style={styles.header}>
-            <Image style={styles.logo} source={require('./logo.png')} />
-            <Text style={styles.heading} testID="heading">
-              Welcome to Mobile
-            </Text>
+          <View style={styles.body}>
+            <Box />
           </View>
 
           <View style={styles.body}>
-            <Box />
+            <Button
+              title="Display Notification"
+              onPress={() => onDisplayNotification()}
+            />
           </View>
         </ScrollView>
       </SafeAreaView>

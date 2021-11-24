@@ -8,6 +8,9 @@
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
-    "@reusejs/react-native-component-template": "*"
+    "@reusejs/react-native-component-template": "*",
+    "@notifee/react-native": "*",
+    "@react-native-firebase/app": "*",
+    "@react-native-firebase/messaging": "*"
   }
 }

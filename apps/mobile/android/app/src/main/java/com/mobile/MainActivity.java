@@ -1,4 +1,4 @@
-package com.mobile;
+package com.reusejs.stack;
 
 import com.facebook.react.ReactActivity;
 
