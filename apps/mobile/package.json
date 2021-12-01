@@ -11,6 +11,8 @@
     "@reusejs/react-native-component-template": "*",
     "@notifee/react-native": "*",
     "@react-native-firebase/app": "*",
-    "@react-native-firebase/messaging": "*"
+    "@react-native-firebase/messaging": "*",
+    "@reusejs/react-native-buttons": "*",
+    "@reusejs/react-native-text-inputs": "*"
   }
 }
