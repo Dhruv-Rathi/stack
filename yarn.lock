@@ -2198,10 +2198,10 @@
   resolved "https://registry.yarnpkg.com/@reusejs/react-native-component-template/-/react-native-component-template-0.0.3.tgz#2b7559d728524de9e9822b0af63371daf641346e"
   integrity sha512-NGux/KRENnOMa2JJPy4/h4kwPtUmfHGU4dpOzBlN1rJuqj1YNkOsJ6pRNn3sbPCUB5RYqdy8R3l2dQ9sAqhilQ==
 
-"@reusejs/react-native-text-inputs@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@reusejs/react-native-text-inputs/-/react-native-text-inputs-0.0.6.tgz#28a200edcd937b7d0ba3d9e4021053d70f761ac9"
-  integrity sha512-zhyQI5xiLmjzz4sI8pdVzOB2yMwierEdGMWC1Ps3v8BFt1lojh8XuQEESbLxvDbktJNvCkkVVfyOVsQymRz+MQ==
+"@reusejs/react-native-text-inputs@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@reusejs/react-native-text-inputs/-/react-native-text-inputs-0.0.7.tgz#d545abfc38be3a864ccd8eed8fe24f2acc16f9e7"
+  integrity sha512-rlNqadtYqUGYsN9dvKatQLHtA1HqJ9XkoIzmRwBSYXfkY3wGtCrB+u9kvz1Zg+VKpewl6cL/oa/ICm6ib/917w==
 
 "@rollup/plugin-babel@^5.3.0":
   version "5.3.0"
